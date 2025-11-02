@@ -16,14 +16,38 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         </a>
 
         <header role="banner">
-          <nav aria-label="Primary" className="bg-white border-gray-200 dark:bg-gray-900">
-             <div className="hidden w-full md:block md:w-auto" id="navbar-default">
-              <ul className="flex gap-4 font-medium flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-              <li><a href="/" className="block py-2 px-3 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Home </a></li>
-              <li><a href="/about" className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"> About</a></li>
+          <nav aria-label="Primary" className="bg-white border-b border-gray-200 dark:bg-gray-900 dark:border-gray-800">
+          <div className="mx-auto max-w-6xl px-4">
+            <ul className="flex items-center gap-6 py-3 font-medium">
+              <li>
+                <a
+                  href="/"
+                  aria-current="page"  // put on the active page only
+                  className="block py-2 px-1 text-blue-700 dark:text-blue-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-600"
+                >
+                  Home
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/about"
+                  className="block py-2 px-1 text-gray-900 dark:text-gray-100 hover:text-blue-700 dark:hover:text-blue-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-600"
+                >
+                  About
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/contact"
+                  className="block py-2 px-1 text-gray-900 dark:text-gray-100 hover:text-blue-700 dark:hover:text-blue-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-600"
+                >
+                  Contact
+                </a>
+              </li>
             </ul>
-             </div>
-          </nav>
+          </div>
+        </nav>
+
         </header>
 
         <main id="main" role="main" tabIndex={-1}>
